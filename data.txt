@@ -1,0 +1,3 @@
+{"email":"aayush1220158@jmit.ac.in","token":"5138","name":"Dhinchak","verified":true,"attri":"Aayush"}
+{"email":"aayushupadhyay.ak@gmail.com","token":"0850","name":"Aayush","verified":true}
+{"email":"asasasasa@ass.in","token":"4708","name":"asasasasa","verified":true}
