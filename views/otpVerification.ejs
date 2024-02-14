@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/otp.css">
+    <title>OTP Verification</title>
+</head>
+<body>
+    <div class="container">
+        <h1>OTP Verification</h1>
+        <p>An OTP has been sent to <span id="emailPlace"><%= email %></span>.</br> Please enter the OTP below:</p>
+        <input type="text" id="otpInput" placeholder="Enter OTP">
+        <button id="verifyButton">Verify OTP</button>
+    </div>
+    <script src="/public/Js/otp.js"></script>
+</body>
+</html>

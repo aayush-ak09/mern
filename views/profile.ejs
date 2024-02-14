@@ -1,0 +1,53 @@
+<!-- profile.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Page</title>
+  <link rel="stylesheet" type="text/css" href="/public/css/profile.css">
+  <link rel="stylesheet" type="text/css" href="/public/css/modal.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/public/js/modal.js"></script>
+</head>
+<body>
+  <div class="profile-content">
+    <div class="profile-details">
+      <img src="/imgs/lgog only .png" alt="Profile Image">
+      <h1><%= name %></h1>
+      <p>Email: <%= email %></p>
+    </div>
+
+    <div class="edit-profile-btn">
+      <a href="#">Became an Instructor</a>
+    </div>
+
+    <div class="edit-image-btn">
+      <a href="/edit-image">Edit Image</a>
+    </div>
+  </div>
+
+  <!-- Agreement Modal -->
+  <div id="agreementModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Agreement</h2>
+      <div class="terms-box">
+        <p style="text-align: center;">**Data Security and Privacy** <br><br></p>
+
+
+
+        <p>  Your data's security and privacy are paramount to us. 
+             Learn more about how we collect, use, and protect 
+             your information on our</p><a href="/TnC.ejs">Data Security and privacy</a> Security and Privacy](link) page. By using our services, you agree to our data practices. We value your trust and are committed to safeguarding your data.</p>
+        <!-- Add more content as needed -->
+      </div>
+      <label>
+        <input type="radio" name="agreement" value="agree"> I agree
+      </label>
+      <label>
+        <input type="radio" name="agreement" value="disagree"> I disagree
+      </label>
+      <button id="nextBtn" style="display: none;">Next</button>
+    </div>
+  </div>
+</body>
+</html>

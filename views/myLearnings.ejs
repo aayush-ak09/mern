@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/myLearnings.css">
+    <title>My Learning</title>
+</head>
+<body>
+    <%- include('navbar.ejs') %>  <!--importing navbar-->
+    <main class="my-learning-content">
+        <div class="welcome-section">
+            <h2>Welcome, <%= name %>!</h2>
+            <p>Here you can manage your learning journey.</p>
+            <p>Use the "All Courses" page to browse and add courses to your learning list.</p>
+        </div>
+        <div class="courses-section">
+            <h2>Your Courses</h2>
+            <p>You haven't added any courses yet. Start by exploring courses in the "All Courses" page.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Grab Coding</p>
+    </footer>
+</body>
+</html>

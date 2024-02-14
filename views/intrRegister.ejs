@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/public/css/form.css">
+        <title>Three-Step Registration</title>    
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+
+
+
+
+    <!-- First section begins -->
+    
+    <div class="registration-form" id="step1">
+        <h2>Step 1: Personal Information</h2>
+        <label> Name </label><br>
+        <input id="name" type="text" placeholder="Enter your name" required><br><br>
+        
+        <label>Country</label><br>
+        <select id="country" name="country" required>
+            <option value="null">Select yout Country</option>
+
+        </select><br><br>
+
+        <label>Date Of Birth</label><br>
+        <input id="dob" type="date" required><br><br>
+                
+        <label>Current Job/Role</label><br>
+        <select id="proff" required>
+        <option value="null">--</option>
+        <option value="student">Student </option>
+        <option value="Employee">Employee</option>
+        <option value="other">other</option>
+        </select><br><br>
+        <button class="next-btn" id="next1" onclick="showStep('step2', event)">Next</button>
+    </div>
+
+
+
+
+
+
+
+    <!-- Second section begins -->
+    
+    
+    
+    <div class="registration-form hidden" id="step2">
+        <h2>Step 2: Contact Details</h2>
+        <label>E-mail</label><br>
+        <input id="e-mail" type="e-mail" placeholder="enter registered e-mail" required><br><br>      
+
+        <label>Enter Mobile Number</label> <br>
+        <div class="input-container">
+            <input id="mobNumber" type="tel" placeholder="Enter Contact Number" required>  <br><br>     
+        </div>
+        <!-- Step 2 form fields go here -->
+        <button class="prev-btn" onclick="showStep('step1',event)">Previous</button>
+        <button class="next-btn" onclick="showStep('step3',event)">Next</button>
+    </div>
+
+
+
+
+    <!-- Third section begins -->
+    
+    
+    <div class="registration-form hidden" id="step3">
+        <h2>Step 3: Account Setup</h2>
+        <div id="userDetailsVerification"></div>
+        <button class="prev-btn" onclick="showStep('step2')">EDIT-FORM</button>
+        <button class="submit-btn" onclick="sendData()">Submit</button>
+    </div>
+
+
+
+
+
+                <!-- step 4 begins -->
+
+    <div class="registration-form hidden" id="step4">
+        <h2>Step 4: Verification</h2>
+        <p>Please enter the OTP sent to your email and phone number:</p>
+        <label id="emailLabel"></label><br>
+        <input id="emailOTP" type="text" placeholder="Enter OTP from Email" required><br><br>
+        <label id="phoneLabel"></label><br>
+        <input id="phoneOTP" type="text" placeholder="Enter OTP from Phone" required><br><br>
+        <div id="errorMessage" class="error-message hidden"></div>
+        
+        <button class="prev-btn" onclick="showStep('step3')">Previous</button>
+        <button class="submit-btn" onclick="verifyOTP()">Verify</button>
+    </div>
+    
+
+
+    <script src="/public/Js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/libphonenumber-js/bundle/libphonenumber-js.min.js"></script>
+
+</body>
+</html>
